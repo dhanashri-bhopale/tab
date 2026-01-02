@@ -1,1 +1,29 @@
-<p>tab-ng-for works!</p>
+<div class="container mt-4 tab">
+  <h2 class="bg-warning p-2 text-center text-white">Tab Using ngFor</h2>
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <ul class="nav nav-pills mb-3">
+        <li class="nav-item" *ngFor="let skill of skillArr">
+          <a
+            href="javascript:;"
+            (click)="onSkillChange(skill.name)"
+            [ngClass]="{
+              active: selectedSkills.toLowerCase().includes(skill.name.toLowerCase())
+            }"
+            class="nav-link"
+            >{{ skill.name }}</a
+          >
+        </li>
+      </ul> 
+
+      <ng-container *ngFor="let skill of skillArr">
+        <div class="card" *ngIf="selectedSkills === skill.name">
+          <div class="card-body">
+            <strong>{{ skill.name | uppercase }}</strong>
+            {{ skill.des }}
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

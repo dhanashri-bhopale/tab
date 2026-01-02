@@ -1,4 +1,4 @@
-<div class="container mt-4">
+<!-- <div class="container mt-4">
   <div class="row">
     <div class="col-md-8">
       <ul class="nav nav-pills mb-2">
@@ -77,6 +77,92 @@
             World Wide Web used to specify the presentation, styling, and 
             layout of documents written in markup languages like HTML.
           </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="container mt-4">
+  <h2 class="bg-success p-2 text-center text-white">Tab Using ngIf</h2>
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="card">
+        <div class="card-header">
+          <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a href="javascript:;" 
+          (click)="changeSkill('html')"
+          [ngClass]="{
+            active: silectedSkill.toLowerCase().includes('html')
+          }"
+          class="nav-link">HTML</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="javascript:;" 
+          (click)="changeSkill('css')"
+          [ngClass]="{
+            active: silectedSkill.toLowerCase().includes('css')
+          }"
+          class="nav-link">CSS</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="javascript:;" 
+          (click)="changeSkill('javascript')"
+          [ngClass]="{
+            active: silectedSkill.toLowerCase().includes('javascript')
+          }"
+          class="nav-link">Javascript</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="javascript:;" 
+          (click)="changeSkill('angular')"
+          [ngClass]="{
+            active: silectedSkill.toLowerCase().includes('angular')
+          }"
+          class="nav-link">Angular</a>
+        </li>
+      </ul>
+        </div>
+      </div>
+
+      <div class="card" *ngIf="silectedSkill.toLowerCase().includes('html')">
+        <div class="card-body">
+          <strong>HTML</strong>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+             Harum corrupti amet aperiam rerum officiis nostrum veritatis.
+              Aspernatur eos, eligendi eaque quas voluptatem ab porro at?</p>
+        </div>
+      </div>
+
+      <div class="card" *ngIf="silectedSkill.toLowerCase().includes('css')">
+        <div class="card-body">
+          <strong>CSS</strong>
+          <p> dolor sit amet, consectetur adipisicing elit.
+             Harum corrupti amet aperiam rerum officiis nostrum veritatis.
+              Aspernatur eos, eligendi eaque quas voluptatem ab porro at?</p>
+        </div>
+      </div>
+
+      <div class="card" *ngIf="silectedSkill.toLowerCase().includes('javascript')">
+        <div class="card-body">
+          <strong>Javascript</strong>
+          <p> consectetur adipisicing elit.
+             Harum corrupti amet aperiam rerum officiis nostrum veritatis.
+              Aspernatur eos, eligendi eaque quas voluptatem ab porro at?</p>
+        </div>
+      </div>
+
+      <div class="card" *ngIf="silectedSkill.toLowerCase().includes('angular')">
+        <div class="card-body">
+          <strong>Angular</strong>
+          <p> adipisicing elit.
+             Harum corrupti amet aperiam rerum officiis nostrum veritatis.
+              Aspernatur eos, eligendi eaque quas voluptatem ab porro at?</p>
         </div>
       </div>
     </div>

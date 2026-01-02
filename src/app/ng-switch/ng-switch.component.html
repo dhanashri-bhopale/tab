@@ -1,0 +1,85 @@
+
+<div class="container mt-4 tab">
+    <h2 class="bg-danger p-2 text-center text-white">Tab Using ngSwitch</h2>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <ul class="nav nav-pills mb-3">
+                <li class="nav-item">
+                    <a href="javascript:;" 
+                    (click)="selectedSkill = 'dbms'"
+                    [ngClass]="{
+                        active: selectedSkill.toLowerCase().includes('dbms')
+                    }"
+                    class="nav-link">DBMS</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="javascript:;" 
+                    (click)="selectedSkill = 'java'"
+                    [ngClass]="{
+                        active: selectedSkill.toLowerCase().includes('java')
+                    }"
+                    class="nav-link">Java</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="javascript:;" 
+                    (click)="selectedSkill = 'machine learning'"
+                    [ngClass]="{
+                        active: selectedSkill.toLowerCase().includes('machine learning')
+                    }"
+                    class="nav-link">Machine Learning</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="javascript:;" 
+                    (click)="selectedSkill = 'artificial intelligence'"
+                    [ngClass]="{
+                        active: selectedSkill.toLowerCase().includes('artificial intelligence')
+                    }"
+                    class="nav-link">Artificial Intelligence</a>
+                </li>
+            </ul>
+
+            <div class="mb-4" [ngSwitch]="selectedSkill">
+                <div class="card" *ngSwitchCase="'dbms'">
+                <div class="card-body">
+                    <p>A <strong>DBMS (Database Management System)</strong> is software that allows users to
+                         create, manage, store, and retrieve data in a structured, efficient,
+                          and secure way, acting as an interface between users/applications and
+                           the actual database
+                    </p>
+                </div>
+            </div>
+
+            <div class="card" *ngSwitchCase="'java'">
+                <div class="card-body">
+                    <p><strong>Java</strong> is a popular programming language. Java is used to develop 
+                        mobile apps, web apps, desktop apps, games and much more.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card" *ngSwitchCase="'machine learning'">
+                <div class="card-body">
+                    <p><strong>Machine Learning (ML)</strong> is a subset of Artificial Intelligence (AI) that 
+                        teaches computers to learn from data and improve performance on tasks 
+                        without being explicitly programmed for every scenario, using algorithms
+                         to find patterns and make predictions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card" *ngSwitchCase="'artificial intelligence'">
+                <div class="card-body">
+                    <p><strong>Artificial Intelligence (AI)</strong> is a branch of computer science focused 
+                        on creating machines that can perform tasks needing human intelligence,
+                         like learning, problem-solving, and decision-making, by processing 
+                         vast data to recognize patterns and act autonomously. 
+                    </p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

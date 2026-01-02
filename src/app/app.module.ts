@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TabNgIfComponent } from './tab-ng-if/tab-ng-if.component';
 import { TabNgForComponent } from './tab-ng-for/tab-ng-for.component';
+import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TabNgIfComponent,
-    TabNgForComponent
+    TabNgForComponent,
+    NgSwitchComponent
   ],
   imports: [
     BrowserModule,
